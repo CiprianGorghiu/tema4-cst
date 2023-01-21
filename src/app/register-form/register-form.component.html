@@ -1,0 +1,56 @@
+<div class="container">
+    <form nz-form [formGroup]="registerForm" class="login-form" (ngSubmit)="register()">
+        <h3>Inregistrare</h3>
+        <nz-form-item>
+          <nz-form-control nzErrorTip="Nume invalid">
+            <nz-input-group nzPrefixIcon="user">
+              <input type="text" nz-input formControlName="name" placeholder="Name" />
+            </nz-input-group>
+          </nz-form-control>
+        </nz-form-item>
+        <nz-form-item>
+            <nz-form-control nzErrorTip="Email-ul este invalid">
+              <nz-input-group nzPrefixIcon="mail">
+                <input type="text" nz-input formControlName="email" placeholder="Email" />
+              </nz-input-group>
+            </nz-form-control>
+          </nz-form-item>
+
+        <nz-form-item>
+          <nz-form-control nzErrorTip="Parola trebuie sa contina minim 8 caractere" nzSuccessTip="Ok" >
+            <nz-input-group nzPrefixIcon="lock">
+              <input  type="password" nz-input formControlName="password" placeholder="Password" />
+            </nz-input-group>
+          </nz-form-control>
+        </nz-form-item>
+       
+
+        <nz-form-item>
+            <nz-form-control  nzErrorTip="Parolele nu sunt la fel">
+              <nz-input-group nzPrefixIcon="check" >
+                <input  type="password" nz-input formControlName="confirmPassword" placeholder="Confirm password" />
+              </nz-input-group>
+            </nz-form-control>
+          </nz-form-item>
+          
+          
+
+
+          <nz-form-item>
+            <nz-form-control>
+              <nz-input-group>
+                <nz-radio-group>
+                  <label><input type="radio" formControlName="gender" value="Male"  >Male</label>
+                    
+                   <label><input type="radio" formControlName="gender" value="Female">Female</label> 
+                   
+                  </nz-radio-group>
+              </nz-input-group>
+             </nz-form-control>  
+          </nz-form-item>
+          <a href="login">Ai deja un cont? Click pentru a te loga!</a>
+        <button nz-button class="login-form-button login-form-margin" [nzType]="'primary'" >Register</button>
+      
+      </form>
+</div>
+
